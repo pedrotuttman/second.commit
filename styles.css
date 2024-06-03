@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Foto_Fluxo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.top-bar {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+}
+
+.bar-text {
+    color: white;
+    font-size: 30px;
+    margin-left: -10px;
+}
+
+.happening-now {
+    color: #f58332;
+    font-size: 20px;
+    margin-left: 570px; /* Adiciona espaço automático à esquerda, empurrando para a direita */
+    padding-right: 50px; /* Adiciona um pouco de espaço à direita, opcional */
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 25px;
+    margin-left: 225px;
+}
+
+.login-message {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    position: absolute;
+    top: 200px;
+    left: 23%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 4;
+}
+
+.pre-cover-image {
+    position: absolute;
+    top: 150px;
+    left: 23%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 900px;
+    height: auto;
+}
+
+.login-container {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+    z-index: 2;
+    margin-right: 300px;
+    margin-top: 110px;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.password-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-password-inline {
+    font-size: 12px;
+    color: #f58332;
+    text-decoration: none;
+}
+
+.forgot-password-inline:hover {
+    text-decoration: underline;
+}
+
+.remember-me {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.remember-me input[type="checkbox"] {
+    display: none;
+}
+
+.remember-me label {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    color: #f58332;
+}
+
+.remember-me label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(100% + 5px);
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.remember-me input[type="checkbox"]:checked + label::before {
+    background-color: #f58332   ;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #f58332;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f58332;
+}
+
+.social-login-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.google-login, .apple-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.google-login {
+    background-color: white;
+    color: black;
+}
+
+.apple-login {
+    background-color: white;
+    color: black;
+}
+
+.google-login:hover {
+    background-color: white;
+}
+
+.apple-login:hover {
+    background-color: white;
+}
+
+#error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
